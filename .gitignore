@@ -1,0 +1,16 @@
+vendor/
+.env
+
+var/cache/*
+var/templates_c/*
+
+!var/cache/.gitkeep
+!var/templates_c/.gitkeep
+
+public/uploads/*
+!public/uploads/.gitkeep
+
+.DS_Store
+.idea/
+.vscode/
+.phpunit.result.cache
