@@ -31,6 +31,18 @@ Start containers:
 docker compose up -d --build
 ```
 
+Apply the database schema:
+
+```bash
+docker compose exec -T db sh -c 'mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE"' < database/schema.sql
+```
+
+Seed demo data:
+
+```bash
+docker compose exec -T app php database/seed.php
+```
+
 The application will be available at:
 
 ```text
